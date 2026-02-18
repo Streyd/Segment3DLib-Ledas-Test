@@ -10,7 +10,6 @@ TEST(Line3DSolverTests, CrossingLinesTest) {
 
     const auto result = Line3DSolver::get_crossing_segment(l1, l2);
 
-    EXPECT_FALSE(result.has_value());
     ASSERT_TRUE(result.has_value());
     EXPECT_NEAR(result->get_len(), 1.0, constants::EPSILON);
 }
